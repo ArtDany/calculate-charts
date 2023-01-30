@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+@font-face {
+    font-family: 'Gopher Mono';
+    src: local('Gopher Mono Light'), local('Gopher-Mono-Light'),
+        url('../fonts/GopherMono-Light.woff2') format('woff2'),
+        url('../fonts/GopherMono-Light.woff') format('woff'),
+        url('../fonts/GopherMono-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Gopher Mono';
+    font-weight: 900;
+}
+
+.initial {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.storage_input {
+    width: 150px;
+    margin-right: 70px;
+}
+
+.range_input {
+    width: 150px;
+}
+
+input {
+    display: block;
+}
+
+p {
+    margin-bottom: 5px;
+    width: 170px;
+}
+
+datalist {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 180px;
+    position: relative;
+    top: -5px;
+}
+
+input[type=range] {
+    height: 40px;
+    -webkit-appearance: none;
+    margin: 0;
+    width: 160px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+/* #divider {
+    display: inline-block;
+    width: 1px;
+    height: 23px;
+    background-color: black;
+    color: black;
+    border: 1px solid black;
+    border-radius: 2px;
+} */
+
+input::before {
+    content: "";
+    display: inline-block;
+    background-color: black;
+    border-radius: 2px;
+    width: 3px;
+    height: 20px;
+    position: relative;
+    top: 10px;
+    left: 1px;
+}
+
+input::after {
+    content: "";
+    display: inline-block;
+    background-color: black;
+    border-radius: 2px;
+    width: 3px;
+    height: 20px;
+    position: relative;
+    top: 10px;
+    right: 1px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px 0px 0px #000000;
+    background: black;
+    border-radius: 25px;
+    border: 1px solid #000000;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    border: 7px solid #000000;
+    height: 27px;
+    width: 12px;
+    border-radius: 0px;
+    background: #FFFFFF;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -14px;
+}
+
+.wrapper {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.result {
+    width: 400px;
+    display: flex;
+}
+
+.graph {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.vendors,
+.icons {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.chart {
+    display: flex;
+    flex-direction: row;
+}
+
+.vendor_name,
+.icon,
+.chart_value,
+#price {
+    margin-top: 20px;
+    line-height: 23px;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    font-size: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+}
+
+.backblaze_icon {
+    margin-left: 5px;
+    background-image: url("../img/blaze.png");
+    background-repeat: no-repeat;
+}
+
+.bunny_icon {
+    margin-left: 2px;
+    background-image: url("../img/bunny.jpg");
+    background-repeat: no-repeat;
+}
+
+.scaleway_icon {
+    background-image: url("../img/scaleway.png");
+    background-repeat: no-repeat;
+    margin-left: 2px;
+}
+
+.vultr_icon {
+    background-image: url("../img/vultr.png");
+    background-repeat: no-repeat;
+}
+
+.divider {
+    margin-top: 10px;
+    background-color: black;
+    border-radius: 2px;
+    width: 5px;
+    height: 238px;
+}
+
+.chart_value {
+    height: 20px;
+    width: 20px;
+    border: 1px solid black;
+}
+
+#scaleway_chart {
+    background-color: #ff33cc;
+}
+
+
+button {
+    margin-right: 5px;
+    width: 14px;
+    height: 9px;
+    font-size: 8px;
+    position: relative;
+    top: -8px;
+}
+
+.scaleway_button {
+    width: 20px;
+}
+
+.bunny {
+    margin-top: 35px;
+}
+
+.scaleway {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+#backblaze_price,
+#bunny_price,
+#scaleway_price,
+#vultr_price {
+    margin-top: 20px;
+}

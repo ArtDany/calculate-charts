@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>test-task</title>
+</head>
+
+<body>
+    <div class="content">
+        <div class="initial">
+            <div class="storage_input">
+                <p>Storage: <output id="storage_value"></output> Gb</p>
+                <input id="storage" type="range" min="0" max="1000" name="storage" step="1" list="values" value="200" />
+                <datalist id="values">
+                    <option value="0" label="0"></option>
+                    <option value="1000" label="1000"></option>
+                </datalist>
+
+            </div>
+            <div class="transfer_input">
+                <p>Transfer: <output id="transfer_value"></output> Gb</p>
+                <input id="transfer" type="range" min="0" max="1000" name="transfer" step="1" value="200">
+                <datalist id="values">
+                    <option value="0" label="0"></option>
+                    <option value="1000" label="1000"></option>
+                </datalist>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="result">
+                <div class="vendors">
+                    <div class="vendor_name">backblaze</div>
+                    <div class="vendor_name bunny">
+                        bunny
+                        <div class="button_group">
+                            <button>hdd</button>
+                            <button>ssd</button>
+                        </div>
+
+                    </div>
+                    <div class="vendor_name scaleway">scaleway
+                        <div class="button_group">
+                            <button class="scaleway_button">multi</button>
+                            <button class="scaleway_button">single</button>
+                        </div>
+                    </div>
+                    <div class="vendor_name">vultr</div>
+                </div>
+                <div class="icons">
+                    <div class="icon backblaze_icon"></div>
+                    <div class="icon bunny_icon">
+
+                    </div>
+                    <div class="icon scaleway_icon"></div>
+                    <div class="icon vultr_icon"></div>
+                </div>
+                <div class="divider"></div>
+                <div class="graph">
+                    <div class="chart">
+                        <div class="chart_value" id="backblaze_chart"></div>
+                        <output id="backblaze_value">7$</output>
+                    </div>
+                    <div class="chart">
+                        <div class="chart_value" id="bunny_chart"></div>
+                        <output id="bunny_value">5$</output>
+                    </div>
+                    <div class="chart">
+                        <div class="chart_value" id="scaleway_chart"></div>
+                        <output id="scaleway_value">5$</output>
+                    </div>
+                    <div class="chart">
+                        <div class="chart_value" id="vultr_chart"></div>
+                        <output id="vultr_value">5$</output>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
