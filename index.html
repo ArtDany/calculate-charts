@@ -13,8 +13,9 @@
     <div class="content">
         <div class="initial">
             <div class="storage_input">
-                <p>Storage: <output id="storage_value"></output> Gb</p>
-                <input id="storage" type="range" min="0" max="1000" name="storage" step="1" list="values" value="200" />
+                <p>Storage: <output class="storage_value"></output> Gb</p>
+                <input class="storage" type="range" min="0" max="1000" name="storage" list="values" step="1"
+                    value="0" />
                 <datalist id="values">
                     <option value="0" label="0"></option>
                     <option value="1000" label="1000"></option>
@@ -22,8 +23,9 @@
 
             </div>
             <div class="transfer_input">
-                <p>Transfer: <output id="transfer_value"></output> Gb</p>
-                <input id="transfer" type="range" min="0" max="1000" name="transfer" step="1" value="200">
+                <p>Transfer: <output class="transfer_value"></output> Gb</p>
+                <input class="transfer" type="range" min="0" max="1000" name="transfer" list="values" step="1"
+                    value="0">
                 <datalist id="values">
                     <option value="0" label="0"></option>
                     <option value="1000" label="1000"></option>
@@ -37,15 +39,15 @@
                     <div class="vendor_name bunny">
                         bunny
                         <div class="button_group">
-                            <button>hdd</button>
-                            <button>ssd</button>
+                            <button class="hdd">hdd</button>
+                            <button class="ssd">ssd</button>
                         </div>
 
                     </div>
                     <div class="vendor_name scaleway">scaleway
                         <div class="button_group">
-                            <button class="scaleway_button">multi</button>
-                            <button class="scaleway_button">single</button>
+                            <button class="scaleway_button single">single</button>
+                            <button class="scaleway_button multi">multi</button>
                         </div>
                     </div>
                     <div class="vendor_name">vultr</div>
@@ -61,26 +63,26 @@
                 <div class="divider"></div>
                 <div class="graph">
                     <div class="chart">
-                        <div class="chart_value" id="backblaze_chart"></div>
-                        <output id="backblaze_value">7$</output>
+                        <div class="chart_value backblaze_chart"></div>
+                        <div class="chart_text "><output class="backblaze_value"></output>$</div>
                     </div>
                     <div class="chart">
-                        <div class="chart_value" id="bunny_chart"></div>
-                        <output id="bunny_value">5$</output>
+                        <div class="chart_value bunny_chart""></div>
+                        <div class=" chart_text"><output class="bunny_value"></output>$</div>
                     </div>
                     <div class="chart">
-                        <div class="chart_value" id="scaleway_chart"></div>
-                        <output id="scaleway_value">5$</output>
+                        <div class="chart_value scaleway_chart"></div>
+                        <div class="chart_text"><output class="scaleway_value"></output>$</div>
                     </div>
                     <div class="chart">
-                        <div class="chart_value" id="vultr_chart"></div>
-                        <output id="vultr_value">5$</output>
+                        <div class="chart_value vultr_chart"></div>
+                        <div class="chart_text"><output class="vultr_value"></output>$</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>

@@ -15,6 +15,7 @@
 }
 
 .content {
+    width: 500px;
     display: flex;
     flex-direction: column;
     font-family: 'Gopher Mono';
@@ -30,7 +31,7 @@
 
 .storage_input {
     width: 150px;
-    margin-right: 70px;
+    margin-right: 60px;
 }
 
 .range_input {
@@ -125,12 +126,13 @@ input[type=range]::-webkit-slider-thumb {
 
 .wrapper {
     margin-top: 20px;
+    margin-left: 80px;
     display: flex;
     justify-content: center;
 }
 
 .result {
-    width: 400px;
+    width: 500px;
     display: flex;
 }
 
@@ -158,8 +160,7 @@ input[type=range]::-webkit-slider-thumb {
 
 .vendor_name,
 .icon,
-.chart_value,
-#price {
+.chart_value {
     margin-top: 20px;
     line-height: 23px;
 }
@@ -201,20 +202,23 @@ input[type=range]::-webkit-slider-thumb {
     margin-top: 10px;
     background-color: black;
     border-radius: 2px;
-    width: 5px;
+    width: 3px;
     height: 238px;
 }
 
 .chart_value {
     height: 20px;
-    width: 20px;
+    width: 0px;
     border: 1px solid black;
 }
 
-#scaleway_chart {
-    background-color: #ff33cc;
+.chart_value {
+    background-color: lightgray;
 }
 
+/* .scaleway_chart {
+    background-color: #ff33cc;
+} */
 
 button {
     margin-right: 5px;
@@ -223,10 +227,11 @@ button {
     font-size: 8px;
     position: relative;
     top: -8px;
+    border: 1px solid lightseagreen
 }
 
 .scaleway_button {
-    width: 20px;
+    width: 23px;
 }
 
 .bunny {
@@ -238,9 +243,127 @@ button {
     margin-bottom: 5px;
 }
 
-#backblaze_price,
-#bunny_price,
-#scaleway_price,
-#vultr_price {
+.backblaze_value,
+.bunny_value,
+.scaleway_value,
+.vultr_value {
     margin-top: 20px;
+}
+
+.chart_text {
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+.hdd {
+    background-color: #ff33cc;
+}
+
+.multi {
+    background-color: #ff33cc;
+}
+
+@media(max-width: 576px) {
+    .content {
+        width: 250px;
+        height: 500px;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .result {
+        width: 250px;
+    }
+
+    .initial {
+        position: relative;
+        top: 100px;
+        left: 60px;
+        flex-direction: column;
+    }
+
+    .storage_input {
+        width: 180px;
+        margin-right: 0px;
+    }
+
+    .vendors {
+        width: 200px;
+        height: 30px;
+        position: relative;
+        top: 300px;
+        display: flex;
+        align-items: center;
+        width: 500px;
+        flex-direction: row;
+    }
+
+    .vendor_name {
+        font-size: 14px;
+        margin-right: 15px;
+    }
+
+    .bunny {
+        margin-top: 20px;
+    }
+
+    .button_group {
+        display: flex;
+        position: relative;
+        top: 5px;
+    }
+
+    .hdd,
+    .single {
+        margin-right: 10px;
+    }
+
+    .icons {
+        height: 30px;
+        flex-direction: row;
+        position: relative;
+        height: 40px;
+        top: 260px;
+        left: -280px;
+    }
+
+    .icon {
+        margin-right: 50px;
+    }
+
+    .backblaze_icon {
+        position: relative;
+        left: 5px;
+    }
+
+    .bunny_icon {
+        position: relative;
+        left: 2px;
+    }
+
+
+
+    .divider {
+        position: relative;
+        width: 3px;
+        height: 260px;
+        top: 120px;
+        left: -453px;
+        transform: rotate(-90deg);
+        border: 1px solid black;
+    }
+
+    .graph {
+        position: absolute;
+        top: 78px;
+        width: 240px;
+        transform: rotate(-90deg);
+    }
+
+    .chart {
+        position: relative;
+        left: 59px;
+        margin-top: 29px;
+    }
 }
