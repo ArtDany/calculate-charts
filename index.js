@@ -192,7 +192,7 @@ function paintingSmallest() {
             smallest = key;
         }
     }
-    eval(smallest).style.backgroundColor = "red";
+    eval(smallest).style.backgroundColor = "#ff33cc";
 }
 
 function resetColor() {
