@@ -43,7 +43,6 @@ let scalewayTotal = 0;
 let vultrTotal = 0;
 
 //buttons events
-
 hdd.addEventListener("click", (event) => {
     ssd.style.backgroundColor = "white";
     hdd.style.backgroundColor = "#ff33cc";
@@ -77,7 +76,6 @@ multi.addEventListener("click", (event) => {
 });
 
 //initial inputs events
-
 storageInput.addEventListener("input", (event) => {
     storage = +event.target.value;
     storageValue.textContent = event.target.value;
@@ -113,7 +111,6 @@ transferInput.addEventListener("input", (event) => {
 });
 
 //calculation
-
 function backblazeCalc() {
     backblazeStorage = +storageInput.value * backblazeStorageCost;
     backblazeTransfer = +transferInput.value * backblazeTransferCost;
@@ -176,23 +173,25 @@ function vultrCalc() {
 }
 
 // painting smallest chart value
-
 function paintingSmallest() {
     const charts = {
-        backblaze_chart: backblaze_chart.offsetWidth,
-        bunny_chart: bunny_chart.offsetWidth,
-        scaleway_chart: scaleway_chart.offsetWidth,
-        vultr_chart: vultr_chart.offsetWidth,
+        backblaze_chart: backblaze_chart,
+        bunny_chart: bunny_chart,
+        scaleway_chart: scaleway_chart,
+        vultr_chart: vultr_chart,
     };
     let smallest = "";
-    for (var key in charts) {
-        if (smallest !== "" && charts[key] < charts[smallest]) {
+    for (let key in charts) {
+        if (
+            smallest !== "" &&
+            charts[key].offsetWidth < charts[smallest].offsetWidth
+        ) {
             smallest = key;
         } else if (smallest === "") {
             smallest = key;
         }
     }
-    eval(smallest).style.backgroundColor = "#ff33cc";
+    charts[smallest].style.backgroundColor = "#ff33cc";
 }
 
 function resetColor() {
