@@ -90,7 +90,6 @@ storageInput.addEventListener("input", (event) => {
     }
     scalewayCalc();
     vultrCalc();
-    resetColor();
     paintingSmallest();
 });
 
@@ -106,7 +105,6 @@ transferInput.addEventListener("input", (event) => {
     }
     scalewayCalc();
     vultrCalc();
-    resetColor();
     paintingSmallest();
 });
 
@@ -175,10 +173,10 @@ function vultrCalc() {
 // painting smallest chart value
 function paintingSmallest() {
     const charts = {
-        backblaze_chart: backblaze_chart,
-        bunny_chart: bunny_chart,
-        scaleway_chart: scaleway_chart,
-        vultr_chart: vultr_chart,
+        backblaze_chart,
+        bunny_chart,
+        scaleway_chart,
+        vultr_chart,
     };
     let smallest = "";
     for (let key in charts) {
@@ -190,13 +188,7 @@ function paintingSmallest() {
         } else if (smallest === "") {
             smallest = key;
         }
+        charts[key].style.backgroundColor = "lightgray";
     }
     charts[smallest].style.backgroundColor = "#ff33cc";
-}
-
-function resetColor() {
-    backblaze_chart.style.backgroundColor = "lightgray";
-    bunny_chart.style.backgroundColor = "lightgray";
-    scaleway_chart.style.backgroundColor = "lightgray";
-    vultr_chart.style.backgroundColor = "lightgray";
 }
